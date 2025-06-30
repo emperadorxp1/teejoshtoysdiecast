@@ -1,0 +1,20 @@
+---
+import bannerImage from "../assets/hwbanner.webp";
+const bannerTitle = "¡Bienvenido a TEEJOSH!";
+const bannerSubtitle =
+  "Encuentra los mejores Hot Wheels y coleccionables en Tacna.";
+---
+
+<section
+  class="relative w-full h-72 md:h-96 flex items-center justify-center text-center text-white"
+  style={`background-image: url('${bannerImage.src}'); background-size: cover; background-position: center;`}
+>
+  <div class="absolute inset-0 bg-black" style="opacity:0.5;"></div>
+
+  <div class="relative z-10 px-4 flex flex-col items-center">
+    <h1 class="text-3xl md:text-5xl font-bold mb-2 drop-shadow-lg">
+      {bannerTitle}
+    </h1>
+    <p class="text-lg md:text-2xl drop-shadow-lg">{bannerSubtitle}</p>
+  </div>
+</section>

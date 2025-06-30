@@ -1,0 +1,33 @@
+---
+import logo from "../assets/logo.png";
+import CartBadge from "../components/CartBadge.jsx";
+---
+
+<nav class="bg-gray-900 text-white px-4 py-6 flex flex-col items-center">
+  <div class="flex items-center space-x-3 mb-4">
+    <img
+      src={logo.src}
+      alt="Logo de TEEJOSH"
+      class="w-20 h-20 object-contain"
+    />
+    <span class="text-2xl font-bold">TEEJOSH DIECAST</span>
+  </div>
+
+  <div
+    class="flex flex-col md:flex-row md:flex-wrap justify-center items-center space-y-3 md:space-y-0 md:space-x-6 text-center"
+  >
+    <a href="/pokemon" class="hover:text-yellow-400 transition-colors">
+      Hot Wheels
+    </a>
+    <a href="/magic" class="hover:text-yellow-400 transition-colors">
+      Mini GT (Muy Pronto)
+    </a>
+    <a href="/one-piece" class="hover:text-yellow-400 transition-colors">
+      Matchbox (Muy Pronto)
+    </a>
+    <a href="/ubicacion" class="hover:text-yellow-400 transition-colors">
+      Ubicación
+    </a>
+    <CartBadge />
+  </div>
+</nav>
