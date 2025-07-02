@@ -7,6 +7,7 @@ import { getCollection } from "astro:content";
 import Catalog from "../components/Catalog.jsx";
 import Footer from "../components/Footer.astro";
 import { CartProvider } from "../contexts/CartContext";
+import CartBadge from "../components/CartBadge.jsx";
 
 const autos = await getCollection("hotwheels");
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -17,8 +18,8 @@ const autos = await getCollection("hotwheels");
   <CartProvider client:load>
     <Header />
     <Carousel />
+    <CartBadge client:load />
     <Catalog autos={autos} client:load />
   </CartProvider>
-
   <Footer />
 </Layout>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
 export default function CartBadge() {
-  const { cartCount } = useContext(CartContext);
+  const { cartCount } = useContext(CartContext);  
 
   return (
     <div className="relative ml-4">
@@ -15,7 +15,7 @@ export default function CartBadge() {
       </a>
       {cartCount > 0 && (
         <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-          {cartCount}
+          {cartCount} 
         </span>
       )}
     </div>

@@ -1,6 +1,11 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const CartContext = createContext();
+// Definimos el shape del contexto con valores por defecto:
+export const CartContext = createContext({
+  cartItems: [],
+  addToCart:() => {},
+  cartCount: 0,
+});
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
@@ -20,6 +25,7 @@ export function CartProvider({ children }) {
 
   // Agregar item al carrito
   const addToCart = (item) => {
+    console.log(item);
     setCartItems((prev) => [...prev, item]);
   };
 

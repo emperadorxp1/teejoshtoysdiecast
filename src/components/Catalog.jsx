@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
 export default function Catalog({ autos }) {
@@ -6,7 +6,7 @@ export default function Catalog({ autos }) {
   const [yearFilter, setYearFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
-  const { addToCart } = useContext(CartContext);
+  const { addToCart} = useContext(CartContext);
 
   const filteredCars = autos.filter(({ data: car }) => {
     const matchName = car.model.toLowerCase().includes(search.toLowerCase());
